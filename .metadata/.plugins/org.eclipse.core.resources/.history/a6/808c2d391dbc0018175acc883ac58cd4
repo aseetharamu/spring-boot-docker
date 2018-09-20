@@ -1,0 +1,38 @@
+package com.example.demo.bean;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "accounts")
+public class Account {
+	
+	private String accountType;
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long accountId;
+	
+	public Account(String accountType, Long accountId) {
+		super();
+		this.accountType = accountType;
+		this.accountId = accountId;
+	}	 
+	
+	public String getAccountType() {
+		return accountType;
+	}
+	public void setAccountName(String accountName) {
+		this.accountType = accountType;
+	}
+	public Long getAccountId() {
+		return accountId;
+	}
+	public void setAccountId(Long accountId) {
+		this.accountId = accountId;
+	}
+	
+
+}

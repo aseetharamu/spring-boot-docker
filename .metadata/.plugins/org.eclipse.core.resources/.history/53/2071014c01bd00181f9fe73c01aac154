@@ -1,0 +1,24 @@
+# list tables
+\dt
+SELECT * FROM account;
+#------------------------
+
+CREATE TABLE account(
+id int PRIMARY KEY,
+name text NOT NULL,
+created_on TIMESTAMP,
+balance REAL
+);
+
+---------------------------
+	insert into account(id, name, created_on, balance) values(10, 'Chase', '2017-02-05', 1000.00);
+	insert into account(id, name, created_on, balance) values(11, 'PNC', '2017-02-05', 2000.00);
+	insert into account(id, name, created_on, balance) values(12, 'Affinity', '2017-02-05', 3000.00);
+
+select * from account;
+
+delete from account where id=1;
+
+---------------------------------
+
+docker run --name=my-postgres -p 5432:5432 -e POSTGRES_DB: project -e POSTGRES_USER=joe -e POSTGRES_PASSWORD=mysecret -d postgres

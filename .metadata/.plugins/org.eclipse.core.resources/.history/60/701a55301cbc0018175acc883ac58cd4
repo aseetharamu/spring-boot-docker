@@ -1,0 +1,15 @@
+# list tables
+\dt
+SELECT * FROM pg_catalog.pg_tables;
+#------------------------
+
+CREATE TABLE account(
+id int PRIMARY KEY,
+name text NOT NULL,
+created_on TIMESTAMP,
+balnace REAL
+);
+
+---------------------------
+insert into account(id, name, created_on, balnace) values(10, '
+

@@ -1,0 +1,4 @@
+spring.datasource.url=jdbc:postgresql://localhost:5432/promos-ms-project
+spring.datasource.username=nss_admin
+spring.datasource.password=
+spring.jpa.hibernate.ddl-auto=update
